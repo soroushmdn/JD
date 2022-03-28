@@ -1,0 +1,18 @@
+// Color Palette
+$main-color: #FF9300;
+$light-color: #f4f4f4;
+$medium-color: #ccc;
+$dark-color: #333;
+
+// Variables
+$website-width: 1280px;
+$bg-img: url(".././img/showcase.jpg");
+
+// Set Text Color
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #333;
+  } @else {
+    @return #fff;
+  }
+}

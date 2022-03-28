@@ -1,0 +1,135 @@
+@media (max-width: 800px) {
+  #header-home {
+    height: 30rem;
+    .header-content {
+      padding-top: 5rem;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  #main-nav {
+    flex-direction: column;
+    ul {
+      li {
+        padding: 1rem;
+      }
+    }
+  }
+  #header {
+    &-home {
+      height: 10rem;
+      border-bottom: 3px solid $main-color;
+      background-position-y: 20%;
+      .header-content {
+        display: none;
+      }
+    }
+    &-inner {
+      height: 10rem;
+    }
+  }
+  // Stack Grid Columns
+  #home-a .specials,
+  #home-b .stats,
+  #home-c .process,
+  #about-a .about-info,
+  #about-d .testimonials,
+  #contact-a .text-fields,
+  #contact-b .contact-info,
+  #work .items {
+    grid-template-columns: 1fr;
+  }
+
+  //Home
+  #home {
+    &-a {
+      .specials div {
+        border-bottom: 1px solid $light-color;
+        padding-bottom: 1rem;
+
+        &:last-child {
+          border-bottom: none;
+          padding-bottom: 0;
+        }
+      }
+    }
+    &-b {
+      .stats div {
+        padding: 2rem 0;
+      }
+    }
+  }
+
+  // About
+  #about {
+    &-a {
+      .about-info {
+        .bio {
+          grid-column: auto;
+        }
+      }
+    }
+    &-c {
+      display: none;
+    }
+  }
+
+  // Contact Page
+  #contact {
+    &-a {
+      .text-fields {
+        & > :nth-child(5) {
+          grid-column: auto;
+        }
+      }
+    }
+    &-b {
+      .contact-info {
+        div {
+          border-bottom: 1px solid #555;
+          padding-bottom: 1rem;
+          margin-bottom: 1rem;
+          &:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    &-c {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  // Footer
+  #main-footer {
+    .footer-content {
+      flex-direction: column;
+      height: 8rem;
+      padding: 1rem;
+    }
+  }
+}
+
+// Landscape
+@media (max-height: 580px) {
+  #header-home {
+    .header-content {
+      padding-top: 2.5rem;
+    }
+  }
+}
+
+@media (max-height: 330px) {
+  #header-home {
+    .header-content {
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
